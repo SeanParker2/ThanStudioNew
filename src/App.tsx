@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import Home from './pages/Home'
@@ -106,7 +106,7 @@ function AppRoutes() {
 
 function App() {
   return (
-    <Router basename={process.env.NODE_ENV === 'production' ? '/ThanStudioNew' : ''}>
+    <Router basename={process.env.NODE_ENV === 'production' ? '/ThanStudioNew' : ''} future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <AppRoutes />
     </Router>
   );
