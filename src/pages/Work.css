@@ -412,23 +412,64 @@
     width: 100%;
   }
 
+  .music_17_4029 {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    height: auto;
+  }
+
   .music_17_4047 {
-    font-size: 28px;
+    font-size: 24px;
     padding: 0 20px;
+    position: relative;
+    top: 0;
+    height: auto;
   }
 
-  .music_17_5093 {
-    margin-left: 0;
+  .music_17_4049 {
+    width: 100%;
+    margin: 20px 0;
     padding: 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 12px;
   }
 
-  .music_17_5094 {
-    font-size: 20px;
-    left: 16px;
+  .category-item {
+    font-size: 13px;
+    padding: 6px 12px;
+    white-space: nowrap;
+  }
+
+  .work-gallery {
+    padding: 20px 16px;
+  }
+
+  .work-banner {
+    height: 200px;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .work-item {
+    margin-bottom: 0;
+  }
+
+  .work-item img {
+    height: 220px;
+  }
+
+  .work-item-title {
+    font-size: 16px;
   }
 }
 
-/* 响应式布局 - 平板端 */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .music_17_4007,
   .flexContainer_5_music_17_4016,
@@ -439,13 +480,39 @@
     width: 100%;
   }
 
+  .music_17_4029 {
+    padding-top: 80px;
+    height: auto;
+  }
+
   .music_17_4047 {
     font-size: 32px;
     padding: 0 40px;
+    position: relative;
+    top: 0;
   }
 
-  .music_17_5093 {
-    margin-left: 40px;
-    padding: 20px;
+  .music_17_4049 {
+    width: 100%;
+    margin: 30px auto;
+    padding: 0 40px;
+    justify-content: center;
+  }
+
+  .work-gallery {
+    padding: 30px 40px;
+  }
+
+  .work-banner {
+    height: 300px;
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .work-item img {
+    height: 250px;
   }
 }

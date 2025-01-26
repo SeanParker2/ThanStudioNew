@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import LoadingScreen from '../components/LoadingScreen';
@@ -67,7 +69,12 @@ const Home: React.FC = () => {
           viewport={{ once: true }}
           variants={scrollVariants}
         >
-          <img src={homeHeroBanner} alt="Hero Banner" />
+          <LazyLoadImage
+            src={homeHeroBanner}
+            alt="Hero Banner"
+            effect="blur"
+            placeholder={<div style={{ background: '#f0f0f0', width: '100%', height: '100%' }} />}
+          />
           <motion.div className="hero-banner-content">
             <motion.h1 
               className="hero-banner-title"
@@ -88,12 +95,15 @@ const Home: React.FC = () => {
           variants={scrollVariants}
         >
           <div className="banner-content">
-            <motion.img 
-              src={homeBanner} 
-              alt="Banner" 
-              className="banner-image" 
-              variants={imageVariants}
-            />
+            <motion.div variants={imageVariants}>
+              <LazyLoadImage
+                src={homeBanner}
+                alt="Banner"
+                className="banner-image"
+                effect="blur"
+                placeholder={<div style={{ background: '#f0f0f0', width: '100%', height: '100%' }} />}
+              />
+            </motion.div>
           </div>
         </motion.div>
 
@@ -108,32 +118,62 @@ const Home: React.FC = () => {
             <h2 className="section-title">精选作品</h2>
             <div className="works-grid">
               <motion.div className="work-item" variants={scrollVariants}>
-                <img src={homeWork1} alt="THAN品牌设计" />
+                <LazyLoadImage
+                  src={homeWork1}
+                  alt="THAN品牌设计"
+                  effect="blur"
+                  placeholder={<div style={{ background: '#f0f0f0', width: '100%', height: '300px' }} />}
+                />
                 <h3>THAN品牌设计</h3>
                 <p>品牌视觉系统设计 / 2023</p>
               </motion.div>
               <motion.div className="work-item" variants={scrollVariants}>
-                <img src={homeWork2} alt="THAN品牌设计" />
+                <LazyLoadImage
+                  src={homeWork2}
+                  alt="THAN品牌设计"
+                  effect="blur"
+                  placeholder={<div style={{ background: '#f0f0f0', width: '100%', height: '300px' }} />}
+                />
                 <h3>THAN品牌设计</h3>
                 <p>品牌视觉系统设计 / 2023</p>
               </motion.div>
               <motion.div className="work-item" variants={scrollVariants}>
-                <img src={homeWork3} alt="THAN品牌设计" />
+                <LazyLoadImage
+                  src={homeWork3}
+                  alt="THAN品牌设计"
+                  effect="blur"
+                  placeholder={<div style={{ background: '#f0f0f0', width: '100%', height: '300px' }} />}
+                />
                 <h3>THAN品牌设计</h3>
                 <p>品牌视觉系统设计 / 2023</p>
               </motion.div>
               <motion.div className="work-item" variants={scrollVariants}>
-                <img src={homeWork4} alt="THAN品牌设计" />
+                <LazyLoadImage
+                  src={homeWork4}
+                  alt="THAN品牌设计"
+                  effect="blur"
+                  placeholder={<div style={{ background: '#f0f0f0', width: '100%', height: '300px' }} />}
+                />
                 <h3>THAN品牌设计</h3>
                 <p>品牌视觉系统设计 / 2023</p>
               </motion.div>
               <motion.div className="work-item" variants={scrollVariants}>
-                <img src={homeWork5} alt="THAN品牌设计" />
+                <LazyLoadImage
+                  src={homeWork5}
+                  alt="THAN品牌设计"
+                  effect="blur"
+                  placeholder={<div style={{ background: '#f0f0f0', width: '100%', height: '300px' }} />}
+                />
                 <h3>THAN品牌设计</h3>
                 <p>品牌视觉系统设计 / 2023</p>
               </motion.div>
               <motion.div className="work-item" variants={scrollVariants}>
-                <img src={homeWork6} alt="THAN品牌设计" />
+                <LazyLoadImage
+                  src={homeWork6}
+                  alt="THAN品牌设计"
+                  effect="blur"
+                  placeholder={<div style={{ background: '#f0f0f0', width: '100%', height: '300px' }} />}
+                />
                 <h3>THAN品牌设计</h3>
                 <p>品牌视觉系统设计 / 2023</p>
               </motion.div>
@@ -187,22 +227,42 @@ const Home: React.FC = () => {
             <h2 className="section-title">团队成员</h2>
             <div className="team-grid">
               <motion.div className="team-member" variants={scrollVariants}>
-                <img src={homeTeammate1} alt="佐藤雅彦" />
+                <LazyLoadImage
+                  src={homeTeammate1}
+                  alt="佐藤雅彦"
+                  effect="blur"
+                  placeholder={<div style={{ background: '#f0f0f0', width: '120px', height: '120px', borderRadius: '50%' }} />}
+                />
                 <h3 className="team-member-name">佐藤雅彦</h3>
                 <p className="team-member-role">创意总监</p>
               </motion.div>
               <motion.div className="team-member" variants={scrollVariants}>
-                <img src={homeTeammate2} alt="山田真子" />
+                <LazyLoadImage
+                  src={homeTeammate2}
+                  alt="山田真子"
+                  effect="blur"
+                  placeholder={<div style={{ background: '#f0f0f0', width: '120px', height: '120px', borderRadius: '50%' }} />}
+                />
                 <h3 className="team-member-name">山田真子</h3>
                 <p className="team-member-role">设计总监</p>
               </motion.div>
               <motion.div className="team-member" variants={scrollVariants}>
-                <img src={homeTeammate3} alt="铃木健一" />
+                <LazyLoadImage
+                  src={homeTeammate3}
+                  alt="铃木健一"
+                  effect="blur"
+                  placeholder={<div style={{ background: '#f0f0f0', width: '120px', height: '120px', borderRadius: '50%' }} />}
+                />
                 <h3 className="team-member-name">铃木健一</h3>
                 <p className="team-member-role">高级设计师</p>
               </motion.div>
               <motion.div className="team-member" variants={scrollVariants}>
-                <img src={homeTeammate4} alt="田中美咲" />
+                <LazyLoadImage
+                  src={homeTeammate4}
+                  alt="田中美咲"
+                  effect="blur"
+                  placeholder={<div style={{ background: '#f0f0f0', width: '120px', height: '120px', borderRadius: '50%' }} />}
+                />
                 <h3 className="team-member-name">田中美咲</h3>
                 <p className="team-member-role">UI设计师</p>
               </motion.div>

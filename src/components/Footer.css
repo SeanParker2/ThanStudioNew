@@ -352,34 +352,56 @@
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .music_17_931 {
     max-width: 100%;
+    height: auto;
+    padding: 60px 0;
   }
 
   .music_17_968 {
     width: 100%;
-    padding: 0 24px;
+    height: auto;
+    position: relative;
+    top: 0;
+    padding: 0 40px;
   }
 
   .music_17_0065 {
     width: 100%;
-    gap: 24px;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
   }
 
   .music_17_0356,
   .music_17_0357,
   .music_17_0358,
   .music_17_0359 {
-    width: calc(50% - 12px);
-    margin-bottom: 24px;
+    width: calc(50% - 20px);
+    height: auto;
+    margin-left: 0;
+  }
+
+  .music_17_0579,
+  .music_17_0584,
+  .music_17_0587,
+  .music_17_0590 {
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 20px;
   }
 
   .music_17_0591 {
     width: 100%;
-    flex-direction: row;
-    gap: 24px;
   }
 
   .music_17_1005,
   .music_17_1006 {
-    width: calc(50% - 12px);
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .music_17_0066 {
+    width: 100%;
+    padding: 32px 40px 0;
   }
 }
