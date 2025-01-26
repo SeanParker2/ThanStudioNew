@@ -373,16 +373,24 @@
   }
 
   .work-gallery {
-    padding: 0 16px;
+    padding: 20px 16px;
   }
 
   .work-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 24px;
+  }
+
+  .work-item {
+    margin-bottom: 0;
   }
 
   .work-item img {
-    height: 250px;
+    height: 220px;
+  }
+
+  .work-item-title {
+    font-size: 16px;
   }
 }
 
@@ -436,6 +444,12 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
     gap: 12px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .music_17_4049::-webkit-scrollbar {
+    display: none;
   }
 
   .category-item {

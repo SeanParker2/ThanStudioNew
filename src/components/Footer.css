@@ -298,15 +298,18 @@
     width: 100%;
     height: auto;
     margin-left: 0;
-    padding: 0;
+    padding: 0 20px;
+    text-align: center;
   }
 
   .music_17_0579,
   .music_17_0584,
   .music_17_0587,
   .music_17_0590 {
+    width: 100%;
     font-size: 18px;
     margin-bottom: 16px;
+    text-align: center;
   }
 
   .music_17_0580,
@@ -318,9 +321,11 @@
   .music_17_0993,
   .music_17_0994,
   .music_17_0995 {
+    width: 100%;
     font-size: 14px;
     line-height: 20px;
     margin-top: 12px;
+    text-align: center;
   }
 
   .music_17_0591 {
