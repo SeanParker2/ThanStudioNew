@@ -1,8 +1,32 @@
 #root {
   width: 100%;
-  margin: 0;
+  max-width: 100%;
+  margin: 0 auto;
   padding: 0;
-  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 大屏幕响应式布局 */
+@media screen and (min-width: 1025px) {
+  #root {
+    padding: 0 40px;
+  }
+}
+
+/* 平板响应式布局 */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #root {
+    padding: 0 24px;
+  }
+}
+
+/* 移动端响应式布局 */
+@media screen and (max-width: 768px) {
+  #root {
+    padding: 0 16px;
+  }
 }
 
 .logo {

@@ -106,7 +106,7 @@ function AppRoutes() {
 
 function App() {
   return (
-    <Router basename={process.env.NODE_ENV === 'production' ? '/ThanStudioNew' : ''} future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <Router basename="/ThanStudioNew" future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <AppRoutes />
     </Router>
   );

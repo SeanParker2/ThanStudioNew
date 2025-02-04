@@ -25,17 +25,21 @@ interface Product {
   image: string;
   title: string;
   price: string;
+  originalPrice?: string;
+  discount?: string;
+  isNew?: boolean;
+  isHot?: boolean;
 }
 
 const products: Product[] = [
-  { id: 1, image: store1, title: "商品1", price: "¥99" },
-  { id: 2, image: store2, title: "商品2", price: "¥199" },
-  { id: 3, image: store3, title: "商品3", price: "¥299" },
-  { id: 4, image: store4, title: "商品4", price: "¥399" },
-  { id: 5, image: store5, title: "商品5", price: "¥499" },
-  { id: 6, image: store6, title: "商品6", price: "¥599" },
-  { id: 7, image: store7, title: "商品7", price: "¥699" },
-  { id: 8, image: store8, title: "商品8", price: "¥799" },
+  { id: 1, image: store1, title: "设计师限定款笔记本", price: "¥99", originalPrice: "¥129", discount: "7.6折", isHot: true },
+  { id: 2, image: store2, title: "创意设计马克杯", price: "¥199", isNew: true },
+  { id: 3, image: store3, title: "艺术家联名帆布包", price: "¥299", originalPrice: "¥399", discount: "7.5折", isHot: true },
+  { id: 4, image: store4, title: "简约设计台历", price: "¥399", isNew: true },
+  { id: 5, image: store5, title: "限量版艺术海报", price: "¥499", originalPrice: "¥599", discount: "8.3折" },
+  { id: 6, image: store6, title: "设计师签名明信片", price: "¥599", isNew: true },
+  { id: 7, image: store7, title: "艺术收藏画册", price: "¥699", originalPrice: "¥899", discount: "7.8折", isHot: true },
+  { id: 8, image: store8, title: "创意文具套装", price: "¥799", isNew: true }
 ];
 
 const Store: React.FC = () => {
@@ -65,12 +69,26 @@ const Store: React.FC = () => {
         <div className="products-grid">
           {products.map((product) => (
             <div key={product.id} className="product-card">
-              <img src={product.image} alt={product.title} className="product-image" />
+              <div className="product-image-container">
+                <img src={product.image} alt={product.title} className="product-image" />
+                {product.isNew && <span className="product-tag new-tag">NEW</span>}
+                {product.isHot && <span className="product-tag hot-tag">HOT</span>}
+              </div>
               <div className="product-info">
                 <h3 className="product-title">{product.title}</h3>
-                <div className="product-price">
-                  <span>{product.price}</span>
-                  <img src={iconCart} alt="加入购物车" className="cart-icon" />
+                <div className="product-price-container">
+                  <div className="price-info">
+                    <span className="current-price">{product.price}</span>
+                    {product.originalPrice && (
+                      <span className="original-price">{product.originalPrice}</span>
+                    )}
+                    {product.discount && (
+                      <span className="discount-tag">{product.discount}</span>
+                    )}
+                  </div>
+                  <button className="cart-button">
+                    <img src={iconCart} alt="加入购物车" className="cart-icon" />
+                  </button>
                 </div>
               </div>
             </div>

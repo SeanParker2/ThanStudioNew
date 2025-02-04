@@ -9,6 +9,12 @@
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.loading-screen.fade-out {
+  opacity: 0;
 }
 
 .loading-container {
@@ -31,7 +37,7 @@
   border: 2px solid #000;
   border-radius: 50%;
   opacity: 0;
-  animation: ripple 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: ripple 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .circle:nth-child(2) {
@@ -54,7 +60,7 @@
   letter-spacing: 4px;
   color: #000;
   opacity: 0;
-  animation: fadeIn 2s ease-out forwards;
+  animation: fadeIn 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 @keyframes ripple {
@@ -71,11 +77,10 @@
 @keyframes fadeIn {
   0% {
     opacity: 0;
-  }
-  50% {
-    opacity: 0;
+    transform: translateY(10px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
