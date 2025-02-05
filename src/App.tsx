@@ -14,7 +14,9 @@ function AppRoutes() {
   const [showLoading, setShowLoading] = useState(false);
 
   useEffect(() => {
-    setShowLoading(true);
+    if (location.pathname !== window.location.pathname) {
+      setShowLoading(true);
+    }
   }, [location]);
 
   const pageVariants = {
@@ -106,7 +108,7 @@ function AppRoutes() {
 
 function App() {
   return (
-    <Router basename={process.env.NODE_ENV === 'production' ? '/ThanStudioNew' : ''} future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <Router basename="/ThanStudioNew" future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <AppRoutes />
     </Router>
   );

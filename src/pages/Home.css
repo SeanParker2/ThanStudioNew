@@ -257,6 +257,22 @@
   }
 }
 
+@media screen and (max-width: 580px) {
+  .hero-banner {
+    height: 60vh;
+  }
+
+  .hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-banner-content {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .hero-banner-title {
     font-size: 32px;
