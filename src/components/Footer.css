@@ -1,8 +1,6 @@
 /* Footer容器样式 */
 .music_17_931 {
   width: 100%;
-  max-width: 1440px;
-  height: 461px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -10,28 +8,24 @@
   padding: 96px 0;
   background-color: #000000;
   position: relative;
-  margin: 0 auto;
 }
 
 /* 内容容器样式 */
 .music_17_968 {
-  width: 1280px;
-  height: 269px;
-  position: absolute;
-  top: 96px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1280px;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0 32px;
+  margin: 0 auto;
 }
 
 /* 主要内容区域样式 */
 .music_17_0065 {
-  width: 1216px;
-  height: 148px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

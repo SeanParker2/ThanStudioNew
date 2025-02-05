@@ -11,20 +11,26 @@ const Header: React.FC = () => {
   };
 
   return (
-    <div className="music_17_901">
-      <div className="music_17_918">
-        <Link to="/" className="music_17_934">Than Studio</Link>
-        <div className={`music_17_935 ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
-          <Link to="/work" className={`music_17_986 ${location.pathname === '/work' ? 'active' : ''}`}>Work</Link>
-          <Link to="/story" className={`music_17_987 ${location.pathname === '/story' ? 'active' : ''}`}>Story</Link>
-          <Link to="/contact" className={`music_17_988 ${location.pathname === '/contact' ? 'active' : ''}`}>Contact</Link>
-          <Link to="/store" className={`music_17_989 ${location.pathname === '/store' ? 'active' : ''}`}>Store</Link>
-        </div>
-        <button className="mobile-menu-button" onClick={toggleMobileMenu}>
-          <span>☰</span>
+    <header className="header">
+      <div className="header-content">
+        <Link to="/" className="header-logo">Than Studio</Link>
+        <nav className={`header-nav ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
+          <Link to="/work" className={`nav-item ${location.pathname === '/work' ? 'active' : ''}`}>Work</Link>
+          <Link to="/story" className={`nav-item ${location.pathname === '/story' ? 'active' : ''}`}>Story</Link>
+          <Link to="/contact" className={`nav-item ${location.pathname === '/contact' ? 'active' : ''}`}>Contact</Link>
+          <Link to="/store" className={`nav-item ${location.pathname === '/store' ? 'active' : ''}`}>Store</Link>
+        </nav>
+        <button 
+          className={`mobile-menu-button ${isMobileMenuOpen ? 'active' : ''}`}
+          onClick={toggleMobileMenu}
+          aria-label="Toggle mobile menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
-    </div>
+    </header>
   );
 };
 

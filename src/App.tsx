@@ -14,9 +14,7 @@ function AppRoutes() {
   const [showLoading, setShowLoading] = useState(false);
 
   useEffect(() => {
-    if (location.pathname !== window.location.pathname) {
-      setShowLoading(true);
-    }
+    setShowLoading(true);
   }, [location]);
 
   const pageVariants = {

@@ -7,11 +7,16 @@ interface LoadingScreenProps {
 
 const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
   const [isVisible, setIsVisible] = useState(true);
+  const [isFading, setIsFading] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsVisible(false);
-      onLoadingComplete?.();
+      setIsFading(true);
+      const fadeTimer = setTimeout(() => {
+        setIsVisible(false);
+        onLoadingComplete?.();
+      }, 600);
+      return () => clearTimeout(fadeTimer);
     }, 1000);
 
     return () => clearTimeout(timer);
@@ -20,7 +25,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
   if (!isVisible) return null;
 
   return (
-    <div className="loading-screen">
+    <div className={`loading-screen ${isFading ? 'fade-out' : ''}`}>
       <div className="loading-container">
         <div className="circle-container">
           <div className="circle"></div>
